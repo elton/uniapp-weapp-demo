@@ -5,15 +5,8 @@
       :key="news.uniquekey"
       class="text-neutral-700"
     >
-      <text class="block">{{ news.title }}</text>
-      <image
-        class="block mx-auto my-2"
-        v-if="news.thumbnail_pic_s"
-        :src="news.thumbnail_pic_s"
-      />
-      <view class="flex justify-between text-sm text-neutral-500"
-        ><text>{{ news.author_name }}</text> <text>{{ news.date }}</text></view
-      >
+      <!-- UniApp中， 在components目录下的组件会自动导入 -->
+      <NewsItem :news="news" />
     </view>
   </view>
 </template>

@@ -8,6 +8,12 @@
         "enablePullDownRefresh": true,
         "onReachBottomDistance": 50
       }
+    },
+    {
+      "path": "pages/detail/detail",
+      "style": {
+        "navigationBarTitleText": "新闻详情"
+      }
     }
   ],
   "globalStyle": {
