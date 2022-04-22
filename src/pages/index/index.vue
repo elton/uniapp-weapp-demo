@@ -6,7 +6,9 @@
       class="text-neutral-700"
     >
       <!-- UniApp中， 在components目录下的组件会自动导入 -->
-      <NewsItem :news="news" />
+      <navigator :url="'/pages/detail/detail?newsID=' + news.uniquekey">
+        <NewsItem :news="news"
+      /></navigator>
     </view>
   </view>
 </template>
