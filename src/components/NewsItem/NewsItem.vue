@@ -1,12 +1,31 @@
 <template>
   <text class="block">{{ news.title }}</text>
+  <view
+    v-if="news.thumbnail_pic_s02 || news.thumbnail_pic_s03"
+    class="flex my-2"
+  >
+    <image class="w-1/3 h-24 object-none" :src="news.thumbnail_pic_s" />
+    <image
+      class="w-1/3 h-24 object-none ml-[1px]"
+      v-if="news.thumbnail_pic_s02"
+      :src="news?.thumbnail_pic_s02"
+    />
+    <image
+      class="w-1/3 h-24 object-none ml-[1px]"
+      v-if="news.thumbnail_pic_s03"
+      :src="news?.thumbnail_pic_s03"
+    />
+  </view>
   <image
-    class="block mx-auto my-2"
-    v-if="news.thumbnail_pic_s"
+    class="my-2 object-none h-44 w-full"
+    v-else-if="
+      news.thumbnail_pic_s && !news.thumbnail_pic_s02 && !news.thumbnail_pic_s03
+    "
     :src="news.thumbnail_pic_s"
   />
-  <view class="flex justify-between text-sm text-neutral-500"
-    ><text>{{ news.author_name }}</text> <text>{{ date }}</text></view
+  <view class="flex text-xs text-neutral-500"
+    ><text>{{ news.author_name }}</text>
+    <text class="ml-2">{{ date }}</text></view
   >
 </template>
 
