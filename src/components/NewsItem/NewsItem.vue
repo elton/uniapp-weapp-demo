@@ -4,14 +4,14 @@
     v-if="news.thumbnail_pic_s02 || news.thumbnail_pic_s03"
     class="flex my-2"
   >
-    <image class="w-1/3 h-24 object-none" :src="news.thumbnail_pic_s" />
+    <image class="w-1/3 h-24 object-fill" :src="news.thumbnail_pic_s" />
     <image
-      class="w-1/3 h-24 object-none ml-[1px]"
+      class="w-1/3 h-24 object-fill ml-[1px]"
       v-if="news.thumbnail_pic_s02"
       :src="news?.thumbnail_pic_s02"
     />
     <image
-      class="w-1/3 h-24 object-none ml-[1px]"
+      class="w-1/3 h-24 object-fill ml-[1px]"
       v-if="news.thumbnail_pic_s03"
       :src="news?.thumbnail_pic_s03"
     />
